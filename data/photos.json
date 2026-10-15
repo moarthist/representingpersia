@@ -1,0 +1,21 @@
+{
+  "museum": {
+    "title": "Representing Persia",
+    "subtitle": "The Qajars",
+    "archiveUrl": "https://bibliotheque-numerique.inha.fr/"
+  },
+  "photos": [
+    {"file": "p01.jpg", "title": "Woman with a floral headdress", "caption": "Portrait of a woman wearing a crown and garland of flowers over a patterned veil.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "Probably the wife of Mirza Nazim Ghaffary (thesis F26/F27). Confirm before publishing an ID."},
+    {"file": "p02.jpg", "title": "Seated woman with a water pipe", "caption": "A woman in flowered dress and patterned veil sits on cushions beside a water pipe.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "Probably thesis F26/F27."},
+    {"file": "p03.jpg", "title": "Woman and child in a courtyard", "caption": "A veiled woman stands with a small child under a covered gallery.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "Possibly F21 or F17."},
+    {"file": "p04.jpg", "title": "Open-air performance before a crowd", "caption": "A large audience sits in a circle around performers and a drummer in a walled courtyard.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "Probably F25, Ta'ziè, Qazvin."},
+    {"file": "p05.jpg", "title": "Family at the wall of a house", "caption": "A father, a mother and three boys pose in front of a lattice window.", "credit": "INHA, NUM 4 PHOT 018 (2)", "note": "Possibly F42, Armenian family."},
+    {"file": "p06.jpg", "title": "Young woman with long braids", "caption": "Portrait of a young woman in a white headscarf with two long braids.", "credit": "INHA, NUM 4 PHOT 018 (2)", "note": "ID to confirm."},
+    {"file": "p07.jpg", "title": "A man, two women and a child", "caption": "A man in a long coat stands behind two seated women in flowered headdresses and a sleeping child.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "Probably F03, Mirza Nazim Ghaffary and his wives."},
+    {"file": "p08.jpg", "title": "Group of veiled women", "caption": "A line of women in dark robes and face veils stands in a sunlit courtyard.", "credit": "INHA, NUM 4 PHOT 018 (2)", "note": "Possibly F40, Saint Catherine sisters, Djoulfa."},
+    {"file": "p09.jpg", "title": "Two children in festive dress", "caption": "Two children in embroidered clothes sit together with a bunch of flowers.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "Possibly F11, niece and nephew of the Shah."},
+    {"file": "p10.jpg", "title": "Veiled woman in profile", "caption": "Portrait of a young woman in a light veil, looking to the side.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "ID to confirm."},
+    {"file": "p11.jpg", "title": "Young man in a long coat", "caption": "A young man in a cap and buttoned coat stands beside a garden wall and stream.", "credit": "INHA, NUM 4 PHOT 018 (2)", "note": "ID to confirm."},
+    {"file": "p12.jpg", "title": "Woman with a water jar", "caption": "A woman in a printed skirt and headscarf holds a copper water vessel in a courtyard.", "credit": "INHA, NUM 4 PHOT 018 (1)", "note": "ID to confirm."}
+  ]
+}

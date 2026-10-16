@@ -208,7 +208,7 @@ export class ScreenUI {
     if (this.tile >= 0) {
       const s = scans[this.tile];
       if (s) {
-        detail.innerHTML = `<strong>${esc(s.title || 'Scan ' + (this.tile + 1))}</strong><span>${esc(s.caption || '')}</span>` + (s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">Open this scan at INHA ↗</a>` : '');
+        detail.innerHTML = `<strong>${esc(s.title || 'Scan ' + (this.tile + 1))}</strong><span>${esc(s.caption || '')}</span>` + (s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">Open this page at INHA ↗</a>` : '');
       } else {
         detail.innerHTML = `<strong>Scan ${String(this.tile + 1).padStart(3, '0')}, ${esc(album.id)}</strong><span>Placeholder. When the real scan is linked in <code>js/content.js</code> its image, caption and INHA link appear here.</span>`;
       }

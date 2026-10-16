@@ -1,7 +1,6 @@
 // All the words in the room live here, apart from the interface labels.
 // Edit freely: the wall panels, the reading panel and the interactive screen are all built from this file.
 
-import { SLOTS } from './photos.js';
 
 export const EXHIBITION = {
   title: 'Representing Persia',
@@ -172,18 +171,37 @@ export const INHA = {
   // Notes per album, and the album's page in the INHA digital library.
   // Only Perse 1 is described in the sources used here: add notes for the others from the INHA catalogue.
   albums: [
-    { id: 'Perse 1', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62746-album-dieulafoy-perse-1?offset=3', note: 'A scrapbook-like album of small prints, often without captions or borders, with stitched panoramas and collages.' },
-    { id: 'Perse 2', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62742-album-dieulafoy-perse-2?offset=4', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 3', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62745-album-dieulafoy-perse-3?offset=5', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 4', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62743-album-dieulafoy-perse-4?offset=6', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 5', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62747-album-dieulafoy-perse-5?offset=7', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 6', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62754-album-dieulafoy-perse-6?offset=8', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Divers', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62750-album-dieulafoy-divers?offset=1', note: 'A further Dieulafoy album of miscellaneous photographs. Add a description from the INHA catalogue.' },
+    { id: 'Perse 1', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62746-album-dieulafoy-perse-1?offset=3',
+      viewer: 62746, iiif: '/d0/90/4f/e6/d0904fe6-c342-4a43-8646-5300db27f951/iiif/1090_doucet_4PHOT018_01_', shelf: '4 PHOT 018 (1)',
+      pages: [6, 17, 27, 38, 49, 59, 70, 81, 91, 102],
+      note: 'A scrapbook-like album of small prints, often without captions or borders, with stitched panoramas and collages.' },
+    { id: 'Perse 2', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62742-album-dieulafoy-perse-2?offset=4',
+      viewer: 62742, iiif: '/78/c8/a6/da/78c8a6da-6504-45a3-acd7-52dc2bf1a4eb/iiif/1090_doucet_4PHOT018_02_', shelf: '4 PHOT 018 (2)',
+      pages: [6, 17, 28, 38, 49, 60, 71, 81, 92, 103],
+      note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 3', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62745-album-dieulafoy-perse-3?offset=5',
+      viewer: 62745, iiif: '/6f/91/a3/14/6f91a314-0d93-4b7a-8ec4-6b4dff474b39/iiif/1090_doucet_4PHOT018_03_', shelf: '4 PHOT 018 (3)',
+      pages: [6, 17, 27, 38, 48, 59, 69, 80, 90, 101],
+      note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 4', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62743-album-dieulafoy-perse-4?offset=6',
+      viewer: 62743, iiif: '/e7/ba/67/f7/e7ba67f7-77df-4476-9b07-62acf0b0353e/iiif/1090_doucet_4PHOT018_04_', shelf: '4 PHOT 018 (4)',
+      pages: [7, 17, 27, 38, 49, 59, 70, 81, 89, 102],
+      note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 5', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62747-album-dieulafoy-perse-5?offset=7',
+      viewer: 62747, iiif: '/12/d1/b1/6f/12d1b16f-16f6-40ad-92b1-4bbeda51f4ca/iiif/1090_doucet_4PHOT018_05_', shelf: '4 PHOT 018 (5)',
+      pages: [6, 17, 28, 39, 50, 61, 72, 83, 94, 105],
+      note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 6', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62754-album-dieulafoy-perse-6?offset=8',
+      viewer: 62754, iiif: '/15/5b/56/95/155b5695-461c-47ac-b0fc-e092af9fa89e/iiif/1090_doucet_4PHOT018_06_', shelf: '4 PHOT 018 (6)',
+      pages: [6, 15, 25, 34, 43, 53, 62, 71, 81, 90],
+      note: 'Add a description from the INHA catalogue.' },
+    { id: 'Divers', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62750-album-dieulafoy-divers?offset=1',
+      viewer: 62750, iiif: '/3e/85/66/cf/3e8566cf-6408-4383-939f-4b2bdf6a17bd/iiif/1090_doucet_4PHOT019_', shelf: '4 PHOT 019',
+      pages: [6, 17, 27, 38, 48, 59, 69, 80, 90, 101],
+      note: 'A further Dieulafoy album of miscellaneous photographs. Add a description from the INHA catalogue.' },
   ],
-  // To show real scans on the screen, add objects to an album here, for example:
-  //   scans: { 'Perse 1': [ { title: '…', src: 'assets/scans/perse1-001.jpg', caption: '…', url: 'https://…' } ] }
-  // Until then the screen shows empty placeholder tiles.
-  scans: SLOT_SCANS(),
+  // Ten thumbnails per album, loaded straight from the INHA image server (IIIF); see INHA.scans below.
+  // To show other pages, change an album's  pages  list (page numbers as in the INHA viewer).
   placeholderTiles: 12,
   // The printed itinerary map, shown on the Route tab next to the simplified route.
   routeMap: {
@@ -204,13 +222,11 @@ export const INHA = {
   susa: { name: 'Susa', lat: 32.19, lon: 48.26, note: 'Excavations of 1884–1886; friezes sent to the Louvre.' },
 };
 
-// The scans that are already hung become tiles on the screen, filed under the album (volume) they came from.
-function SLOT_SCANS() {
-  const out = {};
-  SLOTS.filter((p) => p.src).forEach((p) => {
-    const vol = (p.ref.match(/vol\. (\d)/) || [])[1];
-    if (!vol) return;
-    (out['Perse ' + vol] = out['Perse ' + vol] || []).push({ title: p.title, src: p.src, caption: p.ref });
-  });
-  return out;
-}
+// Thumbnails for each album's chosen pages, each linked to that page in the INHA viewer.
+const IIIF = 'https://bibliotheque-numerique.inha.fr/i/?IIIF=';
+INHA.scans = Object.fromEntries(INHA.albums.map((a) => [a.id, (a.pages || []).map((n) => ({
+  title: `${a.id}, page ${n}`,
+  src: `${IIIF}${a.iiif}${String(n).padStart(6, '0')}.tif/full/!320,320/0/default.jpg`,
+  caption: `Album Dieulafoy, ${a.id}, page ${n}. INHA library, Jacques Doucet collections, shelf mark ${a.shelf}.`,
+  url: `https://bibliotheque-numerique.inha.fr/viewer/${a.viewer}/?offset=#page=${n}&viewer=picture`,
+}))]));

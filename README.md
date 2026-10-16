@@ -53,23 +53,16 @@ Every plate is defined in `js/photos.js` (title, text, reference, `src`). Plates
 You can also move or resize frames in the same file (`wall`, `u`, `y`, `w`, `h`). To try an image without editing
 anything, click an empty frame and choose **Preview an image**; that preview stays in your browser only.
 
-## Put the real scans on the screen
+## The scans on the screen
 
-Open `js/content.js`, find `INHA`, and:
+Each album on the screen (Perse 1–6 and Divers) shows ten thumbnails, loaded straight from the INHA image
+server, and each one links to that page in the INHA viewer. They are set in `js/content.js`, under `INHA.albums`:
 
-- set `url` to the exact address of the digitised albums on the INHA site (it is a placeholder at the moment);
-- replace the "Add a description" notes with text from the INHA catalogue;
-- add scans per album:
+- `pages` lists the ten page numbers shown (as numbered in the INHA viewer); change them to show other pages;
+- `url` is the album's page in the INHA digital library;
+- replace the "Add a description" notes with text from the INHA catalogue.
 
-  ```js
-  scans: {
-    'Perse 1': [
-      { title: 'View of …', src: 'assets/scans/perse1-001.jpg', caption: '…', url: 'https://…' },
-    ],
-  },
-  ```
-
-Until you do, the screen shows empty placeholder tiles.
+The thumbnails need an internet connection and the INHA site to be up.
 
 ## Edit the text
 

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Representing Persia (Qajar) · Micromuseum</title>
+  <meta name="description" content="A 3D micromuseum room for photographs of Qajar Iran: biographies of Jane Dieulafoy and John Thomson, and an interactive screen for the INHA scans.">
+  <meta name="theme-color" content="#e9e4d8">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- three.js is bundled in vendor/, so the page works on GitHub Pages without any build step. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/addons/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main id="stage" class="stage">
+    <canvas id="scene" aria-label="Interactive 3D model of the micromuseum room. Drag to look around, scroll to zoom." tabindex="0"></canvas>
+    <div id="pins" class="pins"></div>
+  </main>
+
+  <header class="masthead">
+    <p class="eyebrow">Micromuseum · Room 01</p>
+    <h1>Representing Persia <em>(Qajar)</em></h1>
+    <p class="sub">Photographs of Qajar Iran, 1881–1886</p>
+  </header>
+
+  <nav id="read-menu" class="read-menu" aria-label="Texts and screen">
+    <button type="button" class="btn" data-read="intro">The room</button>
+    <button type="button" class="btn" data-read="jane">Jane Dieulafoy</button>
+    <button type="button" class="btn" data-read="thomson">John Thomson</button>
+    <button type="button" class="btn accent" data-read="screen">Interactive screen</button>
+  </nav>
+
+  <div id="views" class="views" role="toolbar" aria-label="Camera views"></div>
+
+  <aside id="frame-card" class="frame-card" hidden aria-live="polite"></aside>
+  <aside id="reader" class="reader" hidden role="dialog" aria-label="Reading panel"></aside>
+  <div id="screen-ui" class="screen-ui" hidden></div>
+  <input type="file" id="preview-file" accept="image/*" hidden>
+
+  <section id="welcome" class="welcome" aria-labelledby="w-title">
+    <div class="welcome-card">
+      <p class="eyebrow">Micromuseum · Room 01</p>
+      <h2 id="w-title">Representing Persia <em>(Qajar)</em></h2>
+      <p>A small room for photographs of Qajar Iran. The frames are empty and waiting; the biographies of <strong>Jane Dieulafoy</strong> and <strong>John Thomson</strong> stand in the middle, and an interactive screen opens the <strong>INHA</strong> scans.</p>
+      <ul>
+        <li><b>Drag</b> to look around, <b>scroll</b> or pinch to zoom, <b>right-drag</b> to move.</li>
+        <li>Click the gold pins, or use the buttons above.</li>
+      </ul>
+      <button type="button" id="enter" class="btn accent big">Enter the room</button>
+    </div>
+  </section>
+
+  <div id="loading" class="loading" role="status"><span>Preparing the room…</span></div>
+  <div id="fallback" class="fallback" hidden>
+    <p>This page needs WebGL to show the 3D room, and your browser did not start it. Try a recent version of Chrome, Edge, Firefox or Safari, and check that hardware acceleration is on.</p>
+  </div>
+  <noscript><p class="fallback">This page needs JavaScript to show the 3D room.</p></noscript>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

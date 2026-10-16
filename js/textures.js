@@ -212,7 +212,7 @@ export function wallTextCanvas(ex) {
   g.fillStyle = '#1f1a16';
   g.textBaseline = 'alphabetic';
   g.font = `700 150px ${SERIF}`;
-  g.fillText(ex.title, 20, 150);
+  g.fillText(ex.title, 20, 150, W - 40); // squeezed to fit, so the last letters are never cut off
   g.fillStyle = '#7c2d1d';
   g.font = `italic 120px ${SERIF}`;
   g.fillText(ex.qualifier, 20, 290);

@@ -48,6 +48,9 @@ code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; background: rgba(31
 .masthead h1 { margin: 0; font: 700 clamp(24px, 3.6vw, 38px)/1.05 var(--serif); letter-spacing: -0.01em; text-wrap: balance; }
 .masthead h1 em { font-weight: 400; color: var(--accent); white-space: nowrap; }
 .masthead .sub { margin: 6px 0 0; font-size: 14px; color: var(--ink-soft); }
+.credit { margin: 10px 0 0; font: 12px/1.45 var(--sans); color: var(--ink-soft); }
+.credit strong { color: var(--ink); font-weight: 600; }
+.welcome-card .credit { margin: 18px 0 0; font: 12px/1.45 var(--sans); }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -255,7 +258,7 @@ body.reader-open .read-menu { right: calc(min(480px, 100vw) + var(--gutter)); }
 /* ---------- small screens ---------- */
 @media (max-width: 760px) {
   .masthead { max-width: calc(100vw - 32px); }
-  .masthead .sub { display: none; }
+  .masthead .sub, .masthead .credit { display: none; }
   .read-menu { top: auto; right: var(--gutter); left: var(--gutter); bottom: calc(66px + var(--safe-b)); max-width: none; justify-content: center; }
   .read-menu .btn { padding: 9px 12px; min-height: 36px; font-size: 13px; }
   .reader { top: auto; width: 100vw; height: 78vh; border-left: 0; border-top: 1px solid var(--line); border-radius: 18px 18px 0 0; transform: translateY(24px); }

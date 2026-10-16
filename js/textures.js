@@ -125,7 +125,28 @@ function paragraphs(g, list, x, y, maxW, lineH, gap) {
   return y;
 }
 
-// The text panel on the information stand (Jane Dieulafoy). Drawn at 2x for crisp small type.
+// Number of lines wrapText would use for this text at the current font.
+function countLines(g, text, maxW) {
+  let line = '', n = 0;
+  for (const w of text.split(/\s+/)) {
+    const test = line ? line + ' ' + w : w;
+    if (g.measureText(test).width > maxW && line) { n++; line = w; } else line = test;
+  }
+  return n + (line ? 1 : 0);
+}
+
+// Like paragraphs(), but shrinks the serif type (down to 70%) until the text ends above `bottom`.
+function fitParagraphs(g, list, x, y, maxW, size, lineH, gap, bottom) {
+  let k = 1;
+  for (; k > 0.7; k -= 0.02) {
+    g.font = `${size * k}px ${SERIF}`;
+    const end = list.reduce((yy, p) => yy + countLines(g, p, maxW) * lineH * k + gap * k, y);
+    if (end <= bottom) break;
+  }
+  return paragraphs(g, list, x, y, maxW, lineH * k, gap * k);
+}
+
+// The text panel on the information stand (John Thomson). Drawn at 2x for crisp small type.
 export function bioPanelCanvas(bio, number) {
   const W = 820, H = 1560, S = 2, c = makeCanvas(W * S, H * S), g = c.getContext('2d');
   g.scale(S, S);
@@ -150,13 +171,12 @@ export function bioPanelCanvas(bio, number) {
   g.fillStyle = '#7c2d1d';
   g.fillRect(64, 308, 110, 5);
   g.fillStyle = '#2b2520';
-  g.font = `27px ${SERIF}`;
-  const end = paragraphs(g, bio.panel, 64, 372, W - 128, 38, 18);
+  const end = fitParagraphs(g, bio.panel, 64, 372, W - 128, 27, 38, 18, H - 60);
   if (end > H - 60) console.warn('Stand text overflows the panel by', Math.round(end - (H - 60)), 'px');
   return c;
 }
 
-// A text panel for a wall (John Thomson): canvas 1200 x 1600 for a 1.5 m x 2.0 m panel.
+// A text panel for a wall (Jane Dieulafoy): canvas 1200 x 1600 for a 1.5 m x 2.0 m panel.
 export function wallPanelCanvas(bio, number) {
   const W = 1200, H = 1600, c = makeCanvas(W, H), g = c.getContext('2d');
   g.fillStyle = '#e4dfd3';
@@ -180,8 +200,7 @@ export function wallPanelCanvas(bio, number) {
   g.fillStyle = '#7c2d1d';
   g.fillRect(80, 380, 140, 6);
   g.fillStyle = '#2b2520';
-  g.font = `30px ${SERIF}`;
-  const end = paragraphs(g, bio.panel, 80, 460, W - 160, 42, 20);
+  const end = fitParagraphs(g, bio.panel, 80, 460, W - 160, 30, 42, 20, H - 60);
   if (end > H - 60) console.warn('Wall panel text overflows by', Math.round(end - (H - 60)), 'px');
   return c;
 }

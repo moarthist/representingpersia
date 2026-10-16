@@ -122,7 +122,7 @@ export function buildRoom(scene, { aniso = 4, slots = [] } = {}) {
     else if (wall === 'left') fixture([-0.9, fy, u + 0.2], [-W / 2, y, u], opts);
     else fixture([0.9, fy, u + 0.2], [W / 2, y, u], opts);
   });
-  // Thomson panel on the left wall
+  // Dieulafoy panel on the left wall
   fixture([-0.9, fy, 2.2], [-W / 2, 1.5, 1.45], { intensity: 9, angle: 0.55 });
   // information stand and kiosk
   fixture([-0.9, fy, 0.9], [-1.15, 1.3, -0.1], { intensity: 7, angle: 0.5 });

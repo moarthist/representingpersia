@@ -49,7 +49,7 @@ export function buildFurniture(scene, { aniso = 4, screenTexture }) {
     stand.add(m);
     return m;
   };
-  const janeFace = makeFace(BIOS.jane, '01', 1);
+  const thomsonFace = makeFace(BIOS.thomson, '02', 1);
 
   stand.updateMatrixWorld(true);
   const worldPoint = (obj, v) => obj.localToWorld(v.clone());
@@ -62,24 +62,24 @@ export function buildFurniture(scene, { aniso = 4, screenTexture }) {
       pin: { pos: worldPoint(stand, new THREE.Vector3(0, 1.86, side * (PT / 2 + 0.03))), normal: worldNormal(stand, new THREE.Vector3(0, 0, side)) },
     });
   };
-  faceHot(janeFace, 'jane', 'Jane Dieulafoy', 1);
+  faceHot(thomsonFace, 'thomson', 'John Thomson', 1);
 
-  // ---- John Thomson: a text panel on the left wall, next to the stand ---------------------
+  // ---- Jane Dieulafoy: a text panel on the left wall, next to the stand -------------------
   const { W } = ROOM;
-  const thTex = toTexture(wallPanelCanvas(BIOS.thomson, '02'), { aniso });
-  const thMat = new THREE.MeshStandardMaterial({ map: thTex, roughness: 0.9, emissive: 0xffffff, emissiveMap: thTex, emissiveIntensity: 0, envMapIntensity: 0.15 });
-  const thPanel = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 2.0), thMat);
-  thPanel.position.set(-W / 2 + 0.006, 1.5, 1.45);
-  thPanel.rotation.y = Math.PI / 2;
-  group.add(thPanel);
-  const thShadow = new THREE.Mesh(new THREE.PlaneGeometry(1.7, 2.2), shadowMat);
-  thShadow.position.set(-W / 2 + 0.003, 1.47, 1.46);
-  thShadow.rotation.y = Math.PI / 2;
-  group.add(thShadow);
-  thPanel.updateMatrixWorld(true);
+  const wpTex = toTexture(wallPanelCanvas(BIOS.jane, '01'), { aniso });
+  const wpMat = new THREE.MeshStandardMaterial({ map: wpTex, roughness: 0.9, emissive: 0xffffff, emissiveMap: wpTex, emissiveIntensity: 0, envMapIntensity: 0.15 });
+  const wpPanel = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 2.0), wpMat);
+  wpPanel.position.set(-W / 2 + 0.006, 1.5, 1.45);
+  wpPanel.rotation.y = Math.PI / 2;
+  group.add(wpPanel);
+  const wpShadow = new THREE.Mesh(new THREE.PlaneGeometry(1.7, 2.2), shadowMat);
+  wpShadow.position.set(-W / 2 + 0.003, 1.47, 1.46);
+  wpShadow.rotation.y = Math.PI / 2;
+  group.add(wpShadow);
+  wpPanel.updateMatrixWorld(true);
   hotspots.push({
-    id: 'thomson', type: 'bio', label: 'John Thomson', meshes: [thPanel],
-    setHover: (on) => { thMat.emissiveIntensity = on ? 0.12 : 0; },
+    id: 'jane', type: 'bio', label: 'Jane Dieulafoy', meshes: [wpPanel],
+    setHover: (on) => { wpMat.emissiveIntensity = on ? 0.12 : 0; },
     pin: { pos: new THREE.Vector3(-W / 2 + 0.03, 2.64, 1.45), normal: new THREE.Vector3(1, 0, 0) },
   });
 

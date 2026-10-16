@@ -9,7 +9,7 @@ What is in the room
 - Twelve **plates** (4 on the back wall, a 2 x 2 group on the left, 4 on the right), each with a numbered label and figure number. All twelve hold INHA scans. Click a plate to read its title, text and reference.
 - A **Persian carpet** (1.5 x 2.0 m, from the photo `assets/carpet.jpg`) in the middle of the floor.
 - An information stand with the text on the Scottish geographer and photographer **John Thomson**, and a wall panel next to it on the left wall for **Jane Dieulafoy**.
-- An **interactive screen** for the INHA scans (albums, route map, notes about the scans).
+- An **interactive screen** for the INHA scans: albums Perse 1–6 and Divers, each linked to its INHA page; the route, with Dieulafoy's 1887 itinerary map (`assets/route-map.jpg`); notes about the scans.
 - Entrance wall text, seven camera views (overview, entrance, each wall, wall text, screen, plan) and a reading panel.
 
 ## Run it on your computer

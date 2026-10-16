@@ -216,9 +216,9 @@ export class ScreenUI {
       detail.innerHTML = '<span>Select a tile to see its details.</span>';
     }
     main.append(detail);
-    main.append(el('a', 'k-link', `Open the INHA digital library ↗`));
+    main.append(el('a', 'k-link', album.url ? `Open ${esc(album.id)} at INHA ↗` : 'Open the INHA digital library ↗'));
     const link = main.querySelector('.k-link');
-    link.href = INHA.url;
+    link.href = album.url || INHA.url;
     link.target = '_blank';
     link.rel = 'noopener';
     body.append(list, main);
@@ -265,7 +265,14 @@ export class ScreenUI {
       n.addEventListener('focus', () => show(i));
       n.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i); } });
     });
-    body.append(wrap, info);
+    const side = el('div', 'k-routeside');
+    side.append(wrap, info);
+    const m = INHA.routeMap;
+    if (m) {
+      const fig = el('figure', 'k-oldmap', `<a href="${esc(m.src)}" target="_blank" rel="noopener" aria-label="Open the map full size"><img src="${esc(m.src)}" alt="${esc(m.title)}"></a><figcaption>${esc(m.caption)}</figcaption>`);
+      body.append(fig);
+    }
+    body.append(side);
   }
 
   renderAbout(body) {

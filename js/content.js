@@ -169,20 +169,28 @@ export const INHA = {
     'The albums mix prints she made herself with photographs she collected; a red “D” stamp shows ownership, not necessarily authorship. Quality varies, because the aim was to document every step of the journey.',
     'The printed book, La Perse, la Chaldée et la Susiane (1887), used engravings made from the photographs. Figures were added and shadows lightened, so the albums often show more, and differently, than the book.',
   ],
-  // Notes per album. Only Perse 1 is described in the sources used here: add notes for the others from the INHA catalogue.
+  // Notes per album, and the album's page in the INHA digital library.
+  // Only Perse 1 is described in the sources used here: add notes for the others from the INHA catalogue.
   albums: [
-    { id: 'Perse 1', note: 'A scrapbook-like album of small prints, often without captions or borders, with stitched panoramas and collages.' },
-    { id: 'Perse 2', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 3', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 4', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 5', note: 'Add a description from the INHA catalogue.' },
-    { id: 'Perse 6', note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 1', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62746-album-dieulafoy-perse-1?offset=3', note: 'A scrapbook-like album of small prints, often without captions or borders, with stitched panoramas and collages.' },
+    { id: 'Perse 2', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62742-album-dieulafoy-perse-2?offset=4', note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 3', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62745-album-dieulafoy-perse-3?offset=5', note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 4', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62743-album-dieulafoy-perse-4?offset=6', note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 5', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62747-album-dieulafoy-perse-5?offset=7', note: 'Add a description from the INHA catalogue.' },
+    { id: 'Perse 6', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62754-album-dieulafoy-perse-6?offset=8', note: 'Add a description from the INHA catalogue.' },
+    { id: 'Divers', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62750-album-dieulafoy-divers?offset=1', note: 'A further Dieulafoy album of miscellaneous photographs. Add a description from the INHA catalogue.' },
   ],
   // To show real scans on the screen, add objects to an album here, for example:
   //   scans: { 'Perse 1': [ { title: '…', src: 'assets/scans/perse1-001.jpg', caption: '…', url: 'https://…' } ] }
   // Until then the screen shows empty placeholder tiles.
   scans: SLOT_SCANS(),
   placeholderTiles: 12,
+  // The printed itinerary map, shown on the Route tab next to the simplified route.
+  routeMap: {
+    src: 'assets/route-map.jpg',
+    title: 'Carte pour servir à l’intelligence du voyage de Mme Dieulafoy de Tiflis à Bagdad, Suse et Mohamerè',
+    caption: 'Map from Jane Dieulafoy, La Perse, la Chaldée et la Susiane (Paris: Hachette, 1887). The red line is her itinerary, from Tiflis through Tabriz, Tehran, Isfahan and Shiraz to Susa, Baghdad and Mohammerah.',
+  },
   // The 1881–82 route and Susa. Coordinates are latitude, longitude.
   route: [
     { name: 'Marseille', lat: 43.296, lon: 5.37, note: 'Departure from France.' },

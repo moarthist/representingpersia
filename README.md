@@ -6,7 +6,7 @@ framework, nothing to install. It runs on GitHub Pages as it is.
 What is in the room
 
 - A normal room, 4.6 m wide, 6.0 m deep and 2.9 m high, with a door, track lighting and a polished concrete floor.
-- Twelve **plates** (4 on the back wall, a 2 x 2 group on the left, 4 on the right), each with a numbered label and figure number. Seven hold INHA scans; plates 03, 06, 07, 08 and 09 are still empty. Click a plate to read its title, text and reference.
+- Twelve **plates** (4 on the back wall, a 2 x 2 group on the left, 4 on the right), each with a numbered label and figure number. All twelve hold INHA scans. Click a plate to read its title, text and reference.
 - A **Persian carpet** (1.5 x 2.4 m, drawn in code) in the middle of the floor.
 - An information stand with the text on **Jane Dieulafoy**, and a wall panel next to it on the left wall for the Scottish geographer and photographer **John Thomson**.
 - An **interactive screen** for the INHA scans (albums, route map, notes about the scans).

@@ -18,7 +18,7 @@ export const EXHIBITION = {
     'Click a frame, the gold pins, the stand, the Thomson panel, the screen or the wall text to read more.',
     'Use the view buttons for the entrance, each wall, the screen and the floor plan.',
   ],
-  prototypeNote: 'Seven frames hold scans; plates 03, 06, 07, 08 and 09 are still empty and wait for their scans (see README.md, “Hang your photographs”). Click a frame to read its title, text and reference.',
+  prototypeNote: 'All twelve frames hold scans. Click a frame to read its title, text and reference.',
 };
 
 export const BIOS = {

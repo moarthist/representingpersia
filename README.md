@@ -7,7 +7,7 @@ What is in the room
 
 - A normal room, 4.6 m wide, 6.0 m deep and 2.9 m high, with a door, track lighting and a polished concrete floor.
 - Twelve **plates** (4 on the back wall, a 2 x 2 group on the left, 4 on the right), each with a numbered label and figure number. All twelve hold INHA scans. Click a plate to read its title, text and reference.
-- A **Persian carpet** (1.5 x 2.4 m, drawn in code) in the middle of the floor.
+- A **Persian carpet** (1.5 x 2.0 m, from the photo `assets/carpet.jpg`) in the middle of the floor.
 - An information stand with the text on **Jane Dieulafoy**, and a wall panel next to it on the left wall for the Scottish geographer and photographer **John Thomson**.
 - An **interactive screen** for the INHA scans (albums, route map, notes about the scans).
 - Entrance wall text, seven camera views (overview, entrance, each wall, wall text, screen, plan) and a reading panel.
@@ -86,7 +86,7 @@ biographies (`BIOS`, with key dates and sources) and the screen (`INHA`).
 | `js/config.js` | Room size and camera views |
 | `js/room.js` | Walls, floor, ceiling, door, track lights |
 | `js/frames.js` | The frames and the loading of photographs |
-| `js/carpet.js` | The Persian carpet (procedural texture) |
+| `js/carpet.js` | The Persian carpet (texture from `assets/carpet.jpg`) |
 | `js/furniture.js` | Information stand, kiosk, bench, entrance wall text |
 | `js/screen.js` | The 3D screen picture and the full interactive screen |
 | `js/ui.js` | Reading panel, frame card, pins |

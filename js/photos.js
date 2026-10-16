@@ -30,7 +30,7 @@ const PLATES = [
     ref: ref('2.47', 'Arab women in tribal community of Beni Laam', JD, 5, 55),
   },
   {
-    id: 3, ar: 0.75, src: null,
+    id: 3, ar: 997 / 1400, src: 'assets/photos/plate-03.jpg',
     title: 'Zoroastrian housewife with her son',
     text: ['A Zoroastrian woman wearing loose, patterned clothing and holding her child\'s hand. The intricate patterns and geometric designs on her trousers draw the viewer\'s attention. The Zoroastrian population is primarily concentrated in central Iran, particularly in cities such as Yazd and Kerman. Although the coexistence of the Zoroastrian community with Muslims has presented challenges, these residents have long been held in high regard.'],
     ref: ref('2.37', 'Zoroastrian housewife with her son', JD, 1, 55),
@@ -54,25 +54,25 @@ const PLATES = [
     ref: ref('2.53', 'Grocer in bazar', JDL, 3, 23),
   },
   {
-    id: 6, ar: 0.75, src: null,
+    id: 6, ar: 915 / 1321, src: 'assets/photos/plate-06.jpg',
     title: 'Portrait of the Dr. Olding’s children nanny',
     text: ['A close-up portrait of a young woman with a strong build and a very determined and dignified posture (Fig. 2.31). She tilts her head back and stares intently to the right of the frame. Her hair is delicately braided, with bangs at the front. Her long, thick braid is striking. The white skirt contrasts beautifully with the black hair. According to the photographer, she is the nanny of Dr. Odling\'s children. One area of employment for women was domestic service under various titles such as Dadeh (nanny/maid), Gis-sefid (matriarchal servant), and Dayeh (wet nurse), which were customary among wealthy families.'],
     ref: ref('2.31', 'Portrait of the Dr. Olding’s children nanny', JD, 2, 23, true),
   },
   {
-    id: 7, ar: 0.75, src: null,
+    id: 7, ar: 1400 / 960, src: 'assets/photos/plate-07.jpg',
     title: 'Portrait of Mirza Nazim Ghaffary and his wives',
     text: ['Mirza Nazim Ghaffary is standing behind his wives. Three women sit on chairs, wearing elegant dresses, white stockings, and floral tiaras. Mirza, originally a title for a literate or wealthy person, with a distinctive mustache, looks proudly to his left. Jane Dieulafoy has written that the women are his wives. Their clothes are also inspired by Western fashion.'],
     ref: ref('2.3', 'Portrait of Mirza Nazim Ghaffary and his wives', JD, 1, 47),
   },
   {
-    id: 8, ar: 0.75, src: null,
+    id: 8, ar: 1400 / 1007, src: 'assets/photos/plate-08.jpg',
     title: 'Saint Catherine sisters',
     text: ['Dieulafoy photographed nuns wearing long black outfits during a religious event. They cover their bodies entirely, including their heads. Some are holding a wooden stick in their hands. The writer mentions only the name ‘Djoulfa’ as the location, which ambiguously refers to Djoulfa in the northwestern region or the quartier in Isfahan, ‘New Djoulfa’. In fact, the building of the Saint Catherine convent (location of this photo) still exists in the Djoulfa neighborhood in Isfahan. It was established in 1623 with the participation of three immigrant nuns called Urupsana, Taguhi, and Hr̥ip‘simē, who organized monastic life according to Armenian rules.'],
     ref: ref('2.40', 'Saint Catherine sisters, Djoulfa', JD, 2, 17),
   },
   {
-    id: 9, ar: 0.75, src: null,
+    id: 9, ar: 1230 / 866, src: 'assets/photos/plate-09.jpg',
     title: 'Niece and nephew of the Shah',
     text: ['The portrait of two children from the Qajar nobility, who are relatives of Naser-e-Din Shah, is also remarkable in its kind. On the left, the little girl stares at the camera with half-open eyes from fatigue. She wears a crown of flowers, a makeup item of women of that period, and a (Tcharqad) that is exquisite and embroidered. She is also wearing a lot of jewellery. She also has a black spot between her eyebrows, which is one of the signs of makeup. On the right, a boy in a luxurious coat holds the girl by the shoulder, revealing his full, thick hair. The clothes of these two children are sewn with great delicacy, demonstrating the special art of weaving textiles during the Qajar period. The harmony between the richly patterned clothes and the carpet is spectacular.'],
     ref: ref('2.11', 'Niece and nephew of the Shah', JD, 1, 44),

@@ -64,7 +64,7 @@ code { font: 0.9em ui-monospace, Menlo, Consolas, monospace; background: rgba(31
 .btn:hover { border-color: var(--ink); background: #fff; }
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible, .reader-close:focus-visible, .card-close:focus-visible, .pin:focus-visible, .reader-tab:focus-visible,
-.k-close:focus-visible, .k-tab:focus-visible, .k-album:focus-visible, .k-tile:focus-visible, .k-node:focus-visible, .k-link:focus-visible {
+.k-close:focus-visible, .k-tab:focus-visible, .k-cat:focus-visible, .k-album:focus-visible, .k-tile:focus-visible, .k-node:focus-visible, .k-link:focus-visible {
   outline: 3px solid var(--gold); outline-offset: 2px;
 }
 .btn.accent { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
@@ -215,13 +215,20 @@ body.reader-open .read-menu { right: calc(min(480px, 100vw) + var(--gutter)); }
 .k-close:hover { background: rgba(255, 255, 255, 0.1); }
 .k-body { flex: 1; min-height: 0; overflow: auto; display: flex; }
 .k-albums { gap: 0; }
-.k-list { list-style: none; margin: 0; padding: 10px; width: 168px; flex: none; border-right: 1px solid rgba(255, 255, 255, 0.1); background: #0b1524; overflow-y: auto; }
+.k-list { list-style: none; margin: 0; padding: 10px; width: 200px; flex: none; border-right: 1px solid rgba(255, 255, 255, 0.1); background: #0b1524; overflow-y: auto; }
 .k-album { width: 100%; text-align: left; appearance: none; cursor: pointer; margin-bottom: 4px; padding: 12px 12px; border: 0; border-radius: 8px; background: transparent; color: #c9d6ee; font: 600 15px/1 var(--sans); }
-.k-group { padding: 12px 12px 6px; font: 700 10.5px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: #8197bd; }
-.k-group:first-child { padding-top: 4px; }
+.k-cat { width: 100%; text-align: left; appearance: none; cursor: pointer; display: grid; gap: 3px; margin-bottom: 4px; padding: 11px 26px 11px 12px; border: 0; border-radius: 8px; background: transparent; color: #f2ead8; font: 700 15px/1.15 var(--serif); position: relative; }
+.k-cat small { font: 600 11px/1 var(--sans); color: #8197bd; }
+.k-cat::after { content: '›'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #8197bd; font: 600 16px/1 var(--sans); transition: transform 0.15s; }
+.k-cat[aria-expanded="true"]::after { transform: translateY(-50%) rotate(90deg); color: var(--gold); }
+.k-cat:hover { background: rgba(255, 255, 255, 0.07); }
+.k-cat-item + .k-cat-item { margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.k-sub { list-style: none; margin: 0 0 4px 12px; padding: 0 0 0 8px; border-left: 1px solid rgba(255, 255, 255, 0.12); }
+.k-sub .k-album { padding: 10px 10px; font-size: 14px; }
 .k-album:hover { background: rgba(255, 255, 255, 0.07); }
 .k-album[aria-pressed="true"] { background: #233a63; color: #fff; box-shadow: inset 3px 0 0 var(--gold); }
 .k-main { flex: 1; min-width: 0; padding: 18px 20px; overflow-y: auto; }
+.k-eyebrow { margin: 0 0 4px; font: 700 11px/1 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
 .k-main h3 { margin: 0 0 4px; font: 700 26px/1.1 var(--serif); color: #f2ead8; }
 .k-note { margin: 0 0 14px; color: #a8bad8; font-size: 14px; max-width: 70ch; }
 .k-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
@@ -279,7 +286,10 @@ body.reader-open .read-menu { right: calc(min(480px, 100vw) + var(--gutter)); }
   .k-oldmap a { flex: none; max-height: 60vh; }
   .k-list { width: auto; display: flex; gap: 4px; overflow-x: auto; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 8px; }
   .k-list li { flex: none; }
-  .k-group { display: none; }
+  .k-list li.k-cat-item { display: flex; gap: 4px; align-items: center; border: 0; margin: 0; padding: 0; }
+  .k-cat { width: auto; white-space: nowrap; margin: 0; padding-right: 26px; }
+  .k-cat small { display: none; }
+  .k-sub { display: flex; gap: 4px; margin: 0; padding: 0 0 0 4px; }
   .k-album { margin: 0; width: auto; white-space: nowrap; }
   .k-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
   .pin-label { display: none; }

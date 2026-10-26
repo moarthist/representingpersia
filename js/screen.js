@@ -168,20 +168,46 @@ export class ScreenUI {
 
   renderAlbums(body) {
     body.classList.add('k-albums');
+    // Categories (the photographers), each opening onto its albums; the current album's category is open.
     const list = el('ul', 'k-list');
-    INHA.albums.forEach((a, i) => {
-      if (a.group) list.append(el('li', 'k-group', esc(a.group))); // a heading before the first album of each group
-      const li = el('li');
-      const b = el('button', 'k-album', `<span>${esc(a.id)}</span>`);
-      b.type = 'button';
-      b.setAttribute('aria-pressed', String(i === this.album));
-      b.addEventListener('click', () => { this.album = i; this.tile = -1; this.render(); this.device.querySelectorAll('.k-album')[i].focus(); });
-      li.append(b);
+    const current = INHA.albums[this.album].group;
+    INHA.groups.forEach((g) => {
+      const open = g.id === current;
+      const li = el('li', 'k-cat-item');
+      const cat = el('button', 'k-cat', `<span>${esc(g.name)}</span><small>${esc(g.dates)}</small>`);
+      cat.type = 'button';
+      cat.dataset.group = g.id;
+      cat.setAttribute('aria-expanded', String(open));
+      cat.addEventListener('click', () => {
+        if (open) return;
+        this.album = INHA.albums.findIndex((a) => a.group === g.id);
+        this.tile = -1;
+        this.render();
+        this.device.querySelector(`.k-cat[data-group="${g.id}"]`).focus();
+      });
+      li.append(cat);
+      if (open) {
+        const sub = el('ul', 'k-sub');
+        INHA.albums.forEach((a, i) => {
+          if (a.group !== g.id) return;
+          const ai = el('li');
+          const b = el('button', 'k-album', `<span>${esc(a.id)}</span>`);
+          b.type = 'button';
+          b.dataset.i = i;
+          b.setAttribute('aria-pressed', String(i === this.album));
+          b.addEventListener('click', () => { this.album = i; this.tile = -1; this.render(); this.device.querySelector(`.k-album[data-i="${i}"]`).focus(); });
+          ai.append(b);
+          sub.append(ai);
+        });
+        li.append(sub);
+      }
       list.append(li);
     });
     const album = INHA.albums[this.album];
     const scans = (INHA.scans && INHA.scans[album.id]) || [];
     const main = el('section', 'k-main');
+    const group = INHA.groups.find((g) => g.id === album.group);
+    if (group) main.append(el('p', 'k-eyebrow', `${esc(group.name)} · ${esc(group.dates)}`));
     main.append(el('h3', '', esc(album.id)));
     main.append(el('p', 'k-note', esc(album.note)));
 

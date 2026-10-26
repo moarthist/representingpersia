@@ -159,7 +159,7 @@ export const BIOS = {
 
 // Interactive screen: the INHA digital scans.
 export const INHA = {
-  title: 'Perse 1–6',
+  title: 'Dieulafoy and Thomson albums',
   org: 'Institut national d’histoire de l’art (INHA), Paris',
   // Replace with the exact address of the digitised albums when you have it.
   url: 'https://bibliotheque-numerique.inha.fr/',
@@ -167,11 +167,12 @@ export const INHA = {
     'Jane Dieulafoy’s photographs of Persia survive in six personal albums, Perse 1 to Perse 6, with more than nine hundred prints in total. They came to the library of INHA shortly after Marcel Dieulafoy’s death in 1920 and were digitised in 2021.',
     'The albums mix prints she made herself with photographs she collected; a red “D” stamp shows ownership, not necessarily authorship. Quality varies, because the aim was to document every step of the journey.',
     'The printed book, La Perse, la Chaldée et la Susiane (1887), used engravings made from the photographs. Figures were added and shadows lightened, so the albums often show more, and differently, than the book.',
+    'John Thomson’s A Collection of Photographs taken in Persia, Turkey and in the Caucasus, during a seven months’ journey in 1891 is a two-volume album of platinotype prints, each plate captioned in ink. INHA holds it in the Jacques Doucet collections (shelf marks 4 PHOT 15 (1) and (2)); it was digitised in 2010.',
   ],
   // Notes per album, and the album's page in the INHA digital library.
   // Only Perse 1 is described in the sources used here: add notes for the others from the INHA catalogue.
   albums: [
-    { id: 'Perse 1', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62746-album-dieulafoy-perse-1?offset=3',
+    { id: 'Perse 1', group: 'Jane Dieulafoy, 1881–1886', url: 'https://bibliotheque-numerique.inha.fr/collection/item/62746-album-dieulafoy-perse-1?offset=3',
       viewer: 62746, iiif: '/d0/90/4f/e6/d0904fe6-c342-4a43-8646-5300db27f951/iiif/1090_doucet_4PHOT018_01_', shelf: '4 PHOT 018 (1)',
       pages: [6, 17, 27, 38, 49, 59, 70, 81, 91, 102],
       note: 'A scrapbook-like album of small prints, often without captions or borders, with stitched panoramas and collages.' },
@@ -199,6 +200,31 @@ export const INHA = {
       viewer: 62750, iiif: '/3e/85/66/cf/3e8566cf-6408-4383-939f-4b2bdf6a17bd/iiif/1090_doucet_4PHOT019_', shelf: '4 PHOT 019',
       pages: [6, 17, 27, 38, 48, 59, 69, 80, 90, 101],
       note: 'A further Dieulafoy album of miscellaneous photographs. Add a description from the INHA catalogue.' },
+    // John Thomson's album of the 1891 journey, in two volumes.
+    { id: 'Thomson, vol. 1', group: 'John Thomson, 1891', collection: 'John Thomson, A Collection of Photographs taken in Persia, Turkey and in the Caucasus, during a seven months’ journey in 1891, vol. 1, platinotype',
+      url: 'https://bibliotheque-numerique.inha.fr/collection/item/15526-a-collection-of-photographs-taken-in-persia-turkey-and-in-the-caucasus-vol-1',
+      viewer: 15526, iiif: '/04/f3/47/80/04f34780-418a-4514-8c8f-3a7c91eff201/iiif/1053_doucet_4PHOT15_01_', shelf: '4 PHOT 15 (1)',
+      pages: [8, 20, 26, 31, 33, 38, 47, 55, 65, 74],
+      // Titles from the captions printed under each plate.
+      titles: {
+        8: 'Bushire. Back view of the Agency of the Imperial Bank of Persia', 20: 'Kark Island. Group of natives', 26: 'Bassorah',
+        31: 'Bassorah. Old gate with wood carvings', 33: 'Bagdad. The house of a European resident', 38: 'Mohamrah. A group of natives',
+        47: 'Ahwaz. Natives', 55: 'Shushter. Son and nephew of the Governor',
+        65: 'Kazerun. Poor peasants (Arab settlers) on their way to the mountain pastures', 74: 'Shiraz. Haji Seyid Ibrahim',
+      },
+      note: 'Platinotype prints from John Thomson’s seven-month journey of 1891 through the Persian Gulf, Mesopotamia and southern Persia. Volume 1 runs from Bushire and Bassorah to Shushter, Kazerun and Shiraz.' },
+    { id: 'Thomson, vol. 2', collection: 'John Thomson, A Collection of Photographs taken in Persia, Turkey and in the Caucasus, during a seven months’ journey in 1891, vol. 2, platinotype',
+      url: 'https://bibliotheque-numerique.inha.fr/collection/item/15528-a-collection-of-photographs-taken-in-persia-turkey-and-in-the-caucasus-vol-2',
+      viewer: 15528, iiif: '/87/83/ff/ec/8783ffec-251f-4680-b380-91b670515cdb/iiif/1053_doucet_4PHOT15_02_', shelf: '4 PHOT 15 (2)',
+      pages: [3, 8, 17, 27, 36, 47, 49, 56, 66, 74],
+      titles: {
+        3: 'H.I.H. Masoud Mirza Zil-es-Sultan, eldest son of the Shah, Governor of Isfahan', 8: 'Isfahan. The Maidan-i-Shah (King’s Square)',
+        17: 'Isfahan. The bridge of Ali Verdi Khan', 27: 'On the road from Isfahan to Sultanabad. A muleteer and his servant',
+        36: 'Sultanabad. Group of weavers in a village in the neighbourhood', 47: 'On the road from Sultanabad to Teheran. People of Malayer on their way to Teheran',
+        49: 'A European on the road from Sultanabad to Teheran', 56: 'Teheran. The five blind beggars', 66: 'Tabreez. Group of natives',
+        74: 'On the road from Tabreez to Tiflis. Erivan (Caucasus), the principal street',
+      },
+      note: 'Volume 2 continues north through Isfahan, Sultanabad and Teheran to Tabreez, and on into the Caucasus at Erivan and Tiflis.' },
   ],
   // Ten thumbnails per album, loaded straight from the INHA image server (IIIF); see INHA.scans below.
   // To show other pages, change an album's  pages  list (page numbers as in the INHA viewer).
@@ -225,8 +251,8 @@ export const INHA = {
 // Thumbnails for each album's chosen pages, each linked to that page in the INHA viewer.
 const IIIF = 'https://bibliotheque-numerique.inha.fr/i/?IIIF=';
 INHA.scans = Object.fromEntries(INHA.albums.map((a) => [a.id, (a.pages || []).map((n) => ({
-  title: `${a.id}, page ${n}`,
+  title: (a.titles && a.titles[n]) || `${a.id}, page ${n}`,
   src: `${IIIF}${a.iiif}${String(n).padStart(6, '0')}.tif/full/!320,320/0/default.jpg`,
-  caption: `Album Dieulafoy, ${a.id}, page ${n}. INHA library, Jacques Doucet collections, shelf mark ${a.shelf}.`,
+  caption: `${a.collection || 'Album Dieulafoy, ' + a.id}, page ${n}. INHA library, Jacques Doucet collections, shelf mark ${a.shelf}.`,
   url: `https://bibliotheque-numerique.inha.fr/viewer/${a.viewer}/?offset=#page=${n}&viewer=picture`,
 }))]));

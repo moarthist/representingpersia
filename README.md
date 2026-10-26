@@ -55,7 +55,7 @@ anything, click an empty frame and choose **Preview an image**; that preview sta
 
 ## The scans on the screen
 
-Each album on the screen (Perse 1–6 and Divers) shows ten thumbnails, loaded straight from the INHA image
+Each album on the screen (Dieulafoy: Perse 1–6 and Divers; John Thomson: vols. 1–2) shows ten thumbnails, loaded straight from the INHA image
 server, and each one links to that page in the INHA viewer. They are set in `js/content.js`, under `INHA.albums`:
 
 - `pages` lists the ten page numbers shown (as numbered in the INHA viewer); change them to show other pages;

@@ -170,6 +170,7 @@ export class ScreenUI {
     body.classList.add('k-albums');
     const list = el('ul', 'k-list');
     INHA.albums.forEach((a, i) => {
+      if (a.group) list.append(el('li', 'k-group', esc(a.group))); // a heading before the first album of each group
       const li = el('li');
       const b = el('button', 'k-album', `<span>${esc(a.id)}</span>`);
       b.type = 'button';

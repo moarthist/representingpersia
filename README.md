@@ -100,3 +100,9 @@ biographies (`BIOS`, with key dates and sources) and the screen (`INHA`).
 
 Built with [three.js](https://threejs.org/) (MIT). The INHA name belongs to the Institut national d’histoire de l’art;
 this project is independent and is not affiliated with it.
+
+## Licence
+
+The code of this project is released under the [MIT License](LICENSE), © 2026 Mahmoud Mohammadi. three.js in `vendor/` keeps
+its own MIT licence (`vendor/LICENSE-three.txt`). The licence does not cover the photographs, scans, map and carpet image in
+`assets/`, the images loaded from INHA, or text quoted or drawn from published sources: these keep their own rights.

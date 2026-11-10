@@ -79,18 +79,18 @@ const PLATES = [
   },
   {
     id: 10, ar: 1097 / 1600, src: 'assets/photos/plate-10.jpg',
-    title: 'Veiled woman from Shiraz',
-    text: ['One traditional garment worn by women during the Qajar period was the chador. A long, one-piece piece of cloth with sewn edges that women wore outside the home from head to ankle. Depending on the financial means of the wearer, chadors were simple, sometimes patterned, or made of exquisite fabric. Unlike earlier examples, this photo was taken in a studio and shows a woman in traditional Qajar clothing outside domestic area. One of the most striking features of the photo is the long, pleated trousers worn by women of that period, called Chaqchur. Persian literature says that wearing a Chador and Chaqchur at the same time means being ready to go out. This implicit reference in Persian signals choosing these two items of clothing when going out, and it has been used so often that it has become an idiom in everyday language.'],
-    ref: ref('2.20', 'Veiled woman from Shiraz', JD, 2, 91),
-  },
-  {
-    id: 11, ar: 861 / 1348, src: 'assets/photos/plate-11.jpg',
     title: 'Sheikh Miz\'al ibn Jaber (Local governor in south of Iran)',
     text: [
       'Sheikh Miz’al, looking powerful, sits on a wooden chair on the porch of a building. He wears a turban and a luxurious, gold-embroidered dress with traditional designs. A dark ‘Aba (cloak) is thrown over his shoulders. Shiny leather shoes are also noticeably visible in the photo. This porch, formed by columns and dry leaves, is a typical example of a government building in southern regions.',
       'Jane writes that Sheikh Miz\'al is an intelligent man whom the Arab tribes obey; although he has taken multiple wives, he has no children to succeed him. His brother is Sheikh Khaza\'al, and both are sons of Sheikh Jaber (Dieulafoy 1992, 548). In 18th century Persia, the country\'s regions were governed along tribal lines. Even with the king in the capital, local rulers derived their authority from their clans and constantly struggled to maintain their power. Because Arab tribes in the region bordering the Ottoman Empire traded and maintained connections via sea routes, they amassed considerable wealth. Sheikh Miz\'al\'s splendid attire, polished shoes, and well-groomed appearance reflect this status.',
     ],
     ref: ref('2.8', 'Sheikh Miz\'al ibn Jaber (Local governor in south of Iran)', JDL, 4, 59),
+  },
+  {
+    id: 11, ar: 861 / 1348, src: 'assets/photos/plate-11.jpg',
+    title: 'Veiled woman from Shiraz',
+    text: ['One traditional garment worn by women during the Qajar period was the chador. A long, one-piece piece of cloth with sewn edges that women wore outside the home from head to ankle. Depending on the financial means of the wearer, chadors were simple, sometimes patterned, or made of exquisite fabric. Unlike earlier examples, this photo was taken in a studio and shows a woman in traditional Qajar clothing outside domestic area. One of the most striking features of the photo is the long, pleated trousers worn by women of that period, called Chaqchur. Persian literature says that wearing a Chador and Chaqchur at the same time means being ready to go out. This implicit reference in Persian signals choosing these two items of clothing when going out, and it has been used so often that it has become an idiom in everyday language.'],
+    ref: ref('2.20', 'Veiled woman from Shiraz', JD, 2, 91),
   },
   {
     id: 12, ar: 957 / 1566, src: 'assets/photos/plate-12.jpg',
